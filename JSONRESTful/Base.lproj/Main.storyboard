@@ -192,7 +192,7 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="KfD-4P-Tk1">
                                 <connections>
-                                    <segue destination="9jW-VC-Oub" kind="show" identifier="segueEditar" id="8dv-MV-evX"/>
+                                    <segue destination="9jW-VC-Oub" kind="show" identifier="segueAgregar" id="zFH-zP-a27"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="person.circle" catalog="system" id="epL-QQ-cTD">
@@ -207,6 +207,7 @@
                     <connections>
                         <outlet property="tablaPeliculas" destination="dbf-2N-yjj" id="4XR-cQ-1I5"/>
                         <outlet property="txtBuscar" destination="XEG-W8-qZm" id="d3k-dB-Fc9"/>
+                        <segue destination="9jW-VC-Oub" kind="show" identifier="segueEditar" id="r9U-sh-te1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbT-dY-myt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -312,6 +313,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Guardar">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGuardar:" destination="9jW-VC-Oub" eventType="touchUpInside" id="0ae-PL-ayF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqR-fn-69U">
                                 <rect key="frame" x="82" y="735" width="250" height="35.5"/>
@@ -357,8 +361,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="rzr-qd-Y8c"/>
                     <connections>
-                        <outlet property="botonActualizar" destination="eqR-fn-69U" id="p6u-ye-gPg"/>
-                        <outlet property="botonGuardar" destination="JnB-ya-Gq3" id="Vdm-YO-oUb"/>
+                        <outlet property="botonActualizar" destination="eqR-fn-69U" id="Zcg-pW-mUQ"/>
+                        <outlet property="botonGuardar" destination="JnB-ya-Gq3" id="CaR-5m-5VA"/>
                         <outlet property="txtDuracion" destination="JnZ-fx-s4l" id="dQ7-rf-FU7"/>
                         <outlet property="txtGenero" destination="yJI-VW-fu2" id="wkd-AL-6C8"/>
                         <outlet property="txtNombre" destination="0mn-33-Vgk" id="hme-pC-7ya"/>
@@ -491,6 +495,9 @@
             <point key="canvasLocation" x="2586" y="-286"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="r9U-sh-te1"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="api" width="512" height="512"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
